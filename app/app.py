@@ -67,6 +67,6 @@ if simulate_btn:
 if estimate_btn and nb_runs > 0:
     #nb_runs = 100
     estimated_handle, average_games, handles, games = estimate_handle(start_amount, payback_rate, minimum_bet, nb_runs)
-    st.write('Estimated handle:', round(estimated_handle, 2), ' over ', nb_runs, 'simulation')
+    st.write('Estimated handle:', round(estimated_handle, 2), ' over ', nb_runs, 'simulation' + 's' if nb_runs > 1 else '')
     st.write('Average number of games', round(average_games,1))
     st.line_chart(handles)
